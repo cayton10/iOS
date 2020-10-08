@@ -10,7 +10,12 @@ import UIKit
 class ToDoViewController: UITableViewController {
     
 
-    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        updateSaveButtonState()
+    }
+
+
     //Hide keyboard with return button
     @IBAction func returnPressed(_ sender: UITextField) {
         //Resigns the testfield as first responder
@@ -33,6 +38,15 @@ class ToDoViewController: UITableViewController {
     //Save button outlet
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
+    @IBAction func textEditingChanged(_ sender: UITextField) {
+        updateSaveButtonState()
+    }
+    
+    func updateSaveButtonState() {
+        let text = titleTextField.text ?? ""
+        saveButton.isEnabled = !text.isEmpty
+    }
+
 
 
 }
