@@ -11,10 +11,25 @@ class ToDoViewController: UITableViewController {
     
     //Boolean for date picker hide show
     var isPickerHidden = true
+    //optional model property to send back to TableViewController
+    var todo: ToDo?
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Load editable (not edible) todo item
+        //unwrap optional
+        if let todo = todo {
+            navigationItem.title = "To-Do"
+            titleTextField.text = todo.title
+            isCompleteButton.isSelected = todo.isComplete
+            dueDatePickerView.date = todo.dueDate
+            notesTextView?.text = todo.notes
+        } else {
+            dueDatePickerView.date = Date().addingTimeInterval(24*60*60)
+        }
+        
         //Set initial date to 24 hours ahead of new todo item
         dueDatePickerView.date = Date().addingTimeInterval(24*60*60)
         updateDueDateLabel(date: dueDatePickerView.date)
@@ -91,6 +106,21 @@ class ToDoViewController: UITableViewController {
                 break
             }
         }
+    
+    //Save user's supplied todo information, prepare segue, lick stamp... send :)
+    override func prepare(for segue: UIStoryboardSegue, sender:
+    Any?) {
+        super.prepare(for: segue, sender: sender)
+        guard segue.identifier == "saveUnwind" else { return }
+        let title = titleTextField.text!
+        let isComplete = isCompleteButton.isSelected
+        let dueDate = dueDatePickerView.date
+        //Make sure to designate notes as an optional
+        let notes = notesTextView?.text
+        //Load all the values into the singular ToDo type object
+        todo = ToDo(title: title, isComplete: isComplete, dueDate: dueDate, notes: notes)
+    }
+
     
 
 }

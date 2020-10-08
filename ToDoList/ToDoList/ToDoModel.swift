@@ -10,15 +10,28 @@ import Foundation
 
 //ToDo Struct
 
-struct ToDo {
+struct ToDo: Codable {
     var title: String
     var isComplete: Bool
     var dueDate: Date
     //Optional string. Not all list items will have a description
     var notes: String?
+    
     //Static function to load array of todo items
     static func loadToDos() -> [ToDo]? {
-        return nil
+        guard let codedToDos = try? Data(contentsOf: ArchiveURL)
+            else {return nil}
+        let propertyListDecoder = PropertyListDecoder()
+        return try? propertyListDecoder.decode(Array<ToDo>.self, from: codedToDos)
+    }
+    
+    //Static function to save data to disk
+    static func saveToDos(_ todos: [ToDo]) {
+        let propertyListEncoder = PropertyListEncoder()
+        let codedToDos = try? propertyListEncoder.encode(todos)
+        try? codedToDos?.write(to: ArchiveURL,
+          options: .noFileProtection)
+     
     }
     
     //Static function to load sample data
@@ -38,4 +51,8 @@ struct ToDo {
         formatter.timeStyle = .short
         return formatter
     }()
+    
+    //Define paths for data persistence
+    static let DocumentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+    static let ArchiveURL = DocumentsDirectory.appendingPathComponent("todos").appendingPathExtension("plist")
 }

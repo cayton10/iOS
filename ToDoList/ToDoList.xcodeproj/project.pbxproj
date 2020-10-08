@@ -19,6 +19,7 @@
 		E8C90FB7252E95FE00231997 /* Checked.pdf in Resources */ = {isa = PBXBuildFile; fileRef = E8C90FB6252E95FE00231997 /* Checked.pdf */; };
 		E8C90FBC252E960300231997 /* Unchecked.pdf in Resources */ = {isa = PBXBuildFile; fileRef = E8C90FBB252E960300231997 /* Unchecked.pdf */; };
 		E8C90FC4252E9DE800231997 /* ToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C90FC3252E9DE800231997 /* ToDoViewController.swift */; };
+		E8C90FCD252EC14C00231997 /* ToDoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C90FCC252EC14C00231997 /* ToDoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		E8C90FB6252E95FE00231997 /* Checked.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Checked.pdf; path = Assets.xcassets/AppIcon.appiconset/Checked.pdf; sourceTree = "<group>"; };
 		E8C90FBB252E960300231997 /* Unchecked.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Unchecked.pdf; path = Assets.xcassets/AppIcon.appiconset/Unchecked.pdf; sourceTree = "<group>"; };
 		E8C90FC3252E9DE800231997 /* ToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewController.swift; sourceTree = "<group>"; };
+		E8C90FCC252EC14C00231997 /* ToDoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				E8C90FAC252E800300231997 /* ToDoModel.swift */,
 				E8C90FC3252E9DE800231997 /* ToDoViewController.swift */,
 				E8C90FB1252E80B000231997 /* ToDoTableViewController.swift */,
+				E8C90FCC252EC14C00231997 /* ToDoCell.swift */,
 				E8C90F7C252E78D900231997 /* Main.storyboard */,
 				E8C90F7F252E78DA00231997 /* Assets.xcassets */,
 				E8C90FB6252E95FE00231997 /* Checked.pdf */,
@@ -273,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8C90FC4252E9DE800231997 /* ToDoViewController.swift in Sources */,
+				E8C90FCD252EC14C00231997 /* ToDoCell.swift in Sources */,
 				E8C90F77252E78D900231997 /* AppDelegate.swift in Sources */,
 				E8C90FB2252E80B000231997 /* ToDoTableViewController.swift in Sources */,
 				E8C90F79252E78D900231997 /* SceneDelegate.swift in Sources */,

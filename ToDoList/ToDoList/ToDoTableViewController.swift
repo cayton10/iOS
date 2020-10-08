@@ -8,7 +8,10 @@
 import UIKit
 
 
-class ToDoTableViewController: UITableViewController {
+class ToDoTableViewController: UITableViewController, ToDoCellDelegate {
+    
+
+    
     
     //Create array of todo list items
     var todos = [ToDo]()
@@ -35,12 +38,15 @@ class ToDoTableViewController: UITableViewController {
     
     //Override cell for row at index path function from UITableViewController
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoCellIdentifier")
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoCellIdentifier") as? ToDoCell
         else {
             fatalError("Could not dequeue a cell")
         }
         let todo = todos[indexPath.row]
-        cell.textLabel?.text = todo.title
+        cell.titleLabel.text = todo.title
+        cell.isCompleteButton.isSelected = todo.isComplete
+        cell.delegate = self
+        
         return cell
     }
     
@@ -55,11 +61,64 @@ class ToDoTableViewController: UITableViewController {
         if editingStyle == .delete {
             todos.remove(at: indexPath.row)//Will remove todo item at specified index from array
             tableView.deleteRows(at: [indexPath], with: .fade)//Animation for deletion and removal from UI cell
+            ToDo.saveToDos(todos)//Persist data after deletion
         }
     }
     
     //Unwind segue for new todo item finish and cancel?
     @IBAction func undwindToToDoList(segue: UIStoryboardSegue) {
+        guard segue.identifier == "saveUnwind" else {return}
+        let sourceViewController = segue.source as!
+        ToDoViewController
         
+        //Unwrap our ToDo
+        if let todo = sourceViewController.todo {
+            if let selectedIndexPath = tableView.indexPathForSelectedRow {
+                todos[selectedIndexPath.row] = todo
+                tableView.reloadRows(at: [selectedIndexPath], with: .none)
+            } else {
+                //find an appropriate place to put the info
+                let newIndexPath = IndexPath(row: todos.count, section: 0)
+                //add todo to array
+                todos.append(todo)
+                //Populate information
+                tableView.insertRows(at: [newIndexPath], with: .automatic)
+            }
+        }
+        ToDo.saveToDos(todos)
+    }
+    
+    //Send current todo item details to static table view controller
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "showDetails" {
+                let todoViewController = segue.destination as! ToDoViewController
+                let indexPath = tableView.indexPathForSelectedRow!
+                let selectedTodo = todos[indexPath.row]
+                
+                todoViewController.todo = selectedTodo
+            }
+        }
+    
+    
+    //Delegate protocol
+    func checkMarkTapped(_ sender: ToDoCell) {
+        if let indexPath = tableView.indexPath(for: sender) {
+            var todo = todos[indexPath.row]
+            todo.isComplete = !todo.isComplete
+            todos[indexPath.row] = todo
+            tableView.reloadRows(at: [indexPath], with: .automatic)
+        }
+
+    }
+    
+    func completeButtonTapped(sender: ToDoCell) {
+        if let indexPath = tableView.indexPath(for: sender) {
+            var todo = todos[indexPath.row]
+            todo.isComplete = !todo.isComplete
+            tableView.reloadRows(at: [indexPath], with: .automatic)
+            ToDo.saveToDos(todos)
+        }
     }
 }
+
+
