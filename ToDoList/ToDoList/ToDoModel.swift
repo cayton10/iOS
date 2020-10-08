@@ -31,4 +31,11 @@ struct ToDo {
 
     }
     
+    //Inside ToDo type definition
+    static let dueDateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        formatter.timeStyle = .short
+        return formatter
+    }()
 }
