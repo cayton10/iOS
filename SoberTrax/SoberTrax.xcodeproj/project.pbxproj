@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E888A348254882730009C8A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888A347254882730009C8A7 /* AppDelegate.swift */; };
+		E888A34A254882730009C8A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888A349254882730009C8A7 /* SceneDelegate.swift */; };
+		E888A34C254882730009C8A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888A34B254882730009C8A7 /* ViewController.swift */; };
+		E888A34F254882730009C8A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E888A34D254882730009C8A7 /* Main.storyboard */; };
+		E888A351254882740009C8A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E888A350254882740009C8A7 /* Assets.xcassets */; };
+		E888A354254882740009C8A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E888A352254882740009C8A7 /* LaunchScreen.storyboard */; };
+		E888A35F254882740009C8A7 /* SoberTraxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888A35E254882740009C8A7 /* SoberTraxTests.swift */; };
+		E888A36A254882750009C8A7 /* SoberTraxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888A369254882750009C8A7 /* SoberTraxUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E888A35B254882740009C8A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E888A33C254882730009C8A7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E888A343254882730009C8A7;
+			remoteInfo = SoberTrax;
+		};
+		E888A366254882750009C8A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E888A33C254882730009C8A7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E888A343254882730009C8A7;
+			remoteInfo = SoberTrax;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E888A344254882730009C8A7 /* SoberTrax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoberTrax.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E888A347254882730009C8A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E888A349254882730009C8A7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E888A34B254882730009C8A7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E888A34E254882730009C8A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E888A350254882740009C8A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E888A353254882740009C8A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E888A355254882740009C8A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E888A35A254882740009C8A7 /* SoberTraxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoberTraxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E888A35E254882740009C8A7 /* SoberTraxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoberTraxTests.swift; sourceTree = "<group>"; };
+		E888A360254882740009C8A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E888A365254882740009C8A7 /* SoberTraxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoberTraxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E888A369254882750009C8A7 /* SoberTraxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoberTraxUITests.swift; sourceTree = "<group>"; };
+		E888A36B254882750009C8A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E888A341254882730009C8A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E888A357254882740009C8A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E888A362254882740009C8A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E888A33B254882730009C8A7 = {
+			isa = PBXGroup;
+			children = (
+				E888A346254882730009C8A7 /* SoberTrax */,
+				E888A35D254882740009C8A7 /* SoberTraxTests */,
+				E888A368254882750009C8A7 /* SoberTraxUITests */,
+				E888A345254882730009C8A7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E888A345254882730009C8A7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E888A344254882730009C8A7 /* SoberTrax.app */,
+				E888A35A254882740009C8A7 /* SoberTraxTests.xctest */,
+				E888A365254882740009C8A7 /* SoberTraxUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E888A346254882730009C8A7 /* SoberTrax */ = {
+			isa = PBXGroup;
+			children = (
+				E888A347254882730009C8A7 /* AppDelegate.swift */,
+				E888A349254882730009C8A7 /* SceneDelegate.swift */,
+				E888A34B254882730009C8A7 /* ViewController.swift */,
+				E888A34D254882730009C8A7 /* Main.storyboard */,
+				E888A350254882740009C8A7 /* Assets.xcassets */,
+				E888A352254882740009C8A7 /* LaunchScreen.storyboard */,
+				E888A355254882740009C8A7 /* Info.plist */,
+			);
+			path = SoberTrax;
+			sourceTree = "<group>";
+		};
+		E888A35D254882740009C8A7 /* SoberTraxTests */ = {
+			isa = PBXGroup;
+			children = (
+				E888A35E254882740009C8A7 /* SoberTraxTests.swift */,
+				E888A360254882740009C8A7 /* Info.plist */,
+			);
+			path = SoberTraxTests;
+			sourceTree = "<group>";
+		};
+		E888A368254882750009C8A7 /* SoberTraxUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E888A369254882750009C8A7 /* SoberTraxUITests.swift */,
+				E888A36B254882750009C8A7 /* Info.plist */,
+			);
+			path = SoberTraxUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E888A343254882730009C8A7 /* SoberTrax */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E888A36E254882750009C8A7 /* Build configuration list for PBXNativeTarget "SoberTrax" */;
+			buildPhases = (
+				E888A340254882730009C8A7 /* Sources */,
+				E888A341254882730009C8A7 /* Frameworks */,
+				E888A342254882730009C8A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SoberTrax;
+			productName = SoberTrax;
+			productReference = E888A344254882730009C8A7 /* SoberTrax.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E888A359254882740009C8A7 /* SoberTraxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E888A371254882750009C8A7 /* Build configuration list for PBXNativeTarget "SoberTraxTests" */;
+			buildPhases = (
+				E888A356254882740009C8A7 /* Sources */,
+				E888A357254882740009C8A7 /* Frameworks */,
+				E888A358254882740009C8A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E888A35C254882740009C8A7 /* PBXTargetDependency */,
+			);
+			name = SoberTraxTests;
+			productName = SoberTraxTests;
+			productReference = E888A35A254882740009C8A7 /* SoberTraxTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E888A364254882740009C8A7 /* SoberTraxUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E888A374254882750009C8A7 /* Build configuration list for PBXNativeTarget "SoberTraxUITests" */;
+			buildPhases = (
+				E888A361254882740009C8A7 /* Sources */,
+				E888A362254882740009C8A7 /* Frameworks */,
+				E888A363254882740009C8A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E888A367254882750009C8A7 /* PBXTargetDependency */,
+			);
+			name = SoberTraxUITests;
+			productName = SoberTraxUITests;
+			productReference = E888A365254882740009C8A7 /* SoberTraxUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E888A33C254882730009C8A7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1210;
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					E888A343254882730009C8A7 = {
+						CreatedOnToolsVersion = 12.1;
+					};
+					E888A359254882740009C8A7 = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = E888A343254882730009C8A7;
+					};
+					E888A364254882740009C8A7 = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = E888A343254882730009C8A7;
+					};
+				};
+			};
+			buildConfigurationList = E888A33F254882730009C8A7 /* Build configuration list for PBXProject "SoberTrax" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E888A33B254882730009C8A7;
+			productRefGroup = E888A345254882730009C8A7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E888A343254882730009C8A7 /* SoberTrax */,
+				E888A359254882740009C8A7 /* SoberTraxTests */,
+				E888A364254882740009C8A7 /* SoberTraxUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E888A342254882730009C8A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E888A354254882740009C8A7 /* LaunchScreen.storyboard in Resources */,
+				E888A351254882740009C8A7 /* Assets.xcassets in Resources */,
+				E888A34F254882730009C8A7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E888A358254882740009C8A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E888A363254882740009C8A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E888A340254882730009C8A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E888A34C254882730009C8A7 /* ViewController.swift in Sources */,
+				E888A348254882730009C8A7 /* AppDelegate.swift in Sources */,
+				E888A34A254882730009C8A7 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E888A356254882740009C8A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E888A35F254882740009C8A7 /* SoberTraxTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E888A361254882740009C8A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E888A36A254882750009C8A7 /* SoberTraxUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E888A35C254882740009C8A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E888A343254882730009C8A7 /* SoberTrax */;
+			targetProxy = E888A35B254882740009C8A7 /* PBXContainerItemProxy */;
+		};
+		E888A367254882750009C8A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E888A343254882730009C8A7 /* SoberTrax */;
+			targetProxy = E888A366254882750009C8A7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E888A34D254882730009C8A7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E888A34E254882730009C8A7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E888A352254882740009C8A7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E888A353254882740009C8A7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E888A36C254882750009C8A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E888A36D254882750009C8A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E888A36F254882750009C8A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55YD483567;
+				INFOPLIST_FILE = SoberTrax/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cayton.SoberTrax;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		E888A370254882750009C8A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55YD483567;
+				INFOPLIST_FILE = SoberTrax/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cayton.SoberTrax;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		E888A372254882750009C8A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55YD483567;
+				INFOPLIST_FILE = SoberTraxTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cayton.SoberTraxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SoberTrax.app/SoberTrax";
+			};
+			name = Debug;
+		};
+		E888A373254882750009C8A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55YD483567;
+				INFOPLIST_FILE = SoberTraxTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cayton.SoberTraxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SoberTrax.app/SoberTrax";
+			};
+			name = Release;
+		};
+		E888A375254882750009C8A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55YD483567;
+				INFOPLIST_FILE = SoberTraxUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cayton.SoberTraxUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SoberTrax;
+			};
+			name = Debug;
+		};
+		E888A376254882750009C8A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55YD483567;
+				INFOPLIST_FILE = SoberTraxUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cayton.SoberTraxUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SoberTrax;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E888A33F254882730009C8A7 /* Build configuration list for PBXProject "SoberTrax" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E888A36C254882750009C8A7 /* Debug */,
+				E888A36D254882750009C8A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E888A36E254882750009C8A7 /* Build configuration list for PBXNativeTarget "SoberTrax" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E888A36F254882750009C8A7 /* Debug */,
+				E888A370254882750009C8A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E888A371254882750009C8A7 /* Build configuration list for PBXNativeTarget "SoberTraxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E888A372254882750009C8A7 /* Debug */,
+				E888A373254882750009C8A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E888A374254882750009C8A7 /* Build configuration list for PBXNativeTarget "SoberTraxUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E888A375254882750009C8A7 /* Debug */,
+				E888A376254882750009C8A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E888A33C254882730009C8A7 /* Project object */;
+}
