@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		E888A348254882730009C8A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888A347254882730009C8A7 /* AppDelegate.swift */; };
 		E888A34A254882730009C8A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888A349254882730009C8A7 /* SceneDelegate.swift */; };
-		E888A34C254882730009C8A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888A34B254882730009C8A7 /* ViewController.swift */; };
 		E888A34F254882730009C8A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E888A34D254882730009C8A7 /* Main.storyboard */; };
 		E888A351254882740009C8A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E888A350254882740009C8A7 /* Assets.xcassets */; };
 		E888A354254882740009C8A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E888A352254882740009C8A7 /* LaunchScreen.storyboard */; };
 		E888A35F254882740009C8A7 /* SoberTraxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888A35E254882740009C8A7 /* SoberTraxTests.swift */; };
 		E888A36A254882750009C8A7 /* SoberTraxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888A369254882750009C8A7 /* SoberTraxUITests.swift */; };
+		E8C10110257DBA7800770632 /* habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C1010F257DBA7800770632 /* habit.swift */; };
+		E8C10115257DBCF500770632 /* HabitTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C10114257DBCF500770632 /* HabitTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +39,6 @@
 		E888A344254882730009C8A7 /* SoberTrax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoberTrax.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E888A347254882730009C8A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E888A349254882730009C8A7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E888A34B254882730009C8A7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E888A34E254882730009C8A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E888A350254882740009C8A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E888A353254882740009C8A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +49,8 @@
 		E888A365254882740009C8A7 /* SoberTraxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoberTraxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E888A369254882750009C8A7 /* SoberTraxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoberTraxUITests.swift; sourceTree = "<group>"; };
 		E888A36B254882750009C8A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8C1010F257DBA7800770632 /* habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = habit.swift; sourceTree = "<group>"; };
+		E8C10114257DBCF500770632 /* HabitTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +103,12 @@
 			children = (
 				E888A347254882730009C8A7 /* AppDelegate.swift */,
 				E888A349254882730009C8A7 /* SceneDelegate.swift */,
-				E888A34B254882730009C8A7 /* ViewController.swift */,
 				E888A34D254882730009C8A7 /* Main.storyboard */,
+				E8C10114257DBCF500770632 /* HabitTableViewController.swift */,
 				E888A350254882740009C8A7 /* Assets.xcassets */,
 				E888A352254882740009C8A7 /* LaunchScreen.storyboard */,
 				E888A355254882740009C8A7 /* Info.plist */,
+				E8C1010F257DBA7800770632 /* habit.swift */,
 			);
 			path = SoberTrax;
 			sourceTree = "<group>";
@@ -258,8 +261,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E888A34C254882730009C8A7 /* ViewController.swift in Sources */,
+				E8C10115257DBCF500770632 /* HabitTableViewController.swift in Sources */,
 				E888A348254882730009C8A7 /* AppDelegate.swift in Sources */,
+				E8C10110257DBA7800770632 /* habit.swift in Sources */,
 				E888A34A254882730009C8A7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
