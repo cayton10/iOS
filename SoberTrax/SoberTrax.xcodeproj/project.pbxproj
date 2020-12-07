@@ -16,6 +16,7 @@
 		E888A36A254882750009C8A7 /* SoberTraxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888A369254882750009C8A7 /* SoberTraxUITests.swift */; };
 		E8C10110257DBA7800770632 /* habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C1010F257DBA7800770632 /* habit.swift */; };
 		E8C10115257DBCF500770632 /* HabitTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C10114257DBCF500770632 /* HabitTableViewController.swift */; };
+		E8C10120257ED54900770632 /* HabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C1011F257ED54900770632 /* HabitViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		E888A36B254882750009C8A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8C1010F257DBA7800770632 /* habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = habit.swift; sourceTree = "<group>"; };
 		E8C10114257DBCF500770632 /* HabitTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTableViewController.swift; sourceTree = "<group>"; };
+		E8C1011F257ED54900770632 /* HabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				E888A347254882730009C8A7 /* AppDelegate.swift */,
 				E888A349254882730009C8A7 /* SceneDelegate.swift */,
 				E888A34D254882730009C8A7 /* Main.storyboard */,
+				E8C1011F257ED54900770632 /* HabitViewController.swift */,
 				E8C10114257DBCF500770632 /* HabitTableViewController.swift */,
 				E888A350254882740009C8A7 /* Assets.xcassets */,
 				E888A352254882740009C8A7 /* LaunchScreen.storyboard */,
@@ -263,6 +266,7 @@
 			files = (
 				E8C10115257DBCF500770632 /* HabitTableViewController.swift in Sources */,
 				E888A348254882730009C8A7 /* AppDelegate.swift in Sources */,
+				E8C10120257ED54900770632 /* HabitViewController.swift in Sources */,
 				E8C10110257DBA7800770632 /* habit.swift in Sources */,
 				E888A34A254882730009C8A7 /* SceneDelegate.swift in Sources */,
 			);

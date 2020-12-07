@@ -34,6 +34,10 @@ class HabitTableViewController: UITableViewController{
     
     //Override for viewDidLoad
     override func viewDidLoad() {
+        
+        //Add function to edit habits like a table
+        navigationItem.leftBarButtonItem = editButtonItem
+        
         super.viewDidLoad()
         
         //Set the title on this view controller
@@ -44,5 +48,23 @@ class HabitTableViewController: UITableViewController{
         } else if let savedHabits = Habit.loadSampleHabits() {
             habits = savedHabits
         }
+    }
+    
+    //Add delete option for habits
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    //Override function for delete button
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            habits.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
+    
+    //Unwind segue from creating or canceling new quit date
+    @IBAction func undwindToHabitList(segue: UIStoryboardSegue) {
+        
     }
 }
