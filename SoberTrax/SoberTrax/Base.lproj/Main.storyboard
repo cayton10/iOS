@@ -9,19 +9,56 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Summary-->
+        <!--Time-->
         <scene sceneID="6jM-2Z-6Op">
             <objects>
-                <tableViewController id="nOq-OX-cHk" sceneMemberID="viewController">
+                <tableViewController id="nOq-OX-cHk" userLabel="Time" customClass="TimeViewController" customModule="SoberTrax" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="6BZ-Qa-QQr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <sections>
-                            <tableViewSection id="ONL-iH-bFG">
+                            <tableViewSection headerTitle="Time Summary" id="ONL-iH-bFG" userLabel="TimeProg">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="minutesText" rowHeight="44" id="08M-jM-4Ru" userLabel="minutesText">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="minutesText" rowHeight="44" id="14X-4m-wau" userLabel="secondsText">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="14X-4m-wau" id="H6X-gw-fza">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SecondsText" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eW7-w4-vkL" userLabel="minutesText">
+                                                    <rect key="frame" x="20" y="11" width="374" height="33"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="eW7-w4-vkL" secondAttribute="bottom" constant="-11" id="HW6-kf-8V8"/>
+                                                <constraint firstItem="eW7-w4-vkL" firstAttribute="leading" secondItem="H6X-gw-fza" secondAttribute="leadingMargin" id="Onl-29-psQ"/>
+                                                <constraint firstItem="eW7-w4-vkL" firstAttribute="trailing" secondItem="H6X-gw-fza" secondAttribute="trailingMargin" id="XEd-ad-BxV"/>
+                                                <constraint firstItem="eW7-w4-vkL" firstAttribute="top" secondItem="H6X-gw-fza" secondAttribute="topMargin" id="hJ4-EU-cgK"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="secondsProgress" id="mXb-5U-CDi" userLabel="secondsProgress">
+                                        <rect key="frame" x="0.0" y="72" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mXb-5U-CDi" id="FHc-6U-mHB">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <progressView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.69999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="sjK-ws-UKv" userLabel="secondsProgress">
+                                                    <rect key="frame" x="20" y="20" width="374" height="4"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </progressView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="tintColor" systemColor="systemGreenColor"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="minutesText" rowHeight="44" id="08M-jM-4Ru" userLabel="minutesText">
+                                        <rect key="frame" x="0.0" y="116" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="08M-jM-4Ru" id="J9u-j6-fU4">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -43,7 +80,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="minutesProgress" id="WV4-sS-i1B" userLabel="minutesProgress">
-                                        <rect key="frame" x="0.0" y="72" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="160" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WV4-sS-i1B" id="QW7-aK-ADY">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -52,12 +89,13 @@
                                                 <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="K5R-ET-56u">
                                                     <rect key="frame" x="20" y="19" width="374" height="5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="tintColor" systemColor="systemGreenColor"/>
                                                 </progressView>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="hoursText" rowHeight="38" id="8w0-vS-EFV" userLabel="hoursText">
-                                        <rect key="frame" x="0.0" y="116" width="414" height="38"/>
+                                        <rect key="frame" x="0.0" y="204" width="414" height="38"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8w0-vS-EFV" id="aLz-Cd-o8P">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="38"/>
@@ -82,7 +120,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="hoursProgress" id="mA0-gu-lcS" userLabel="hoursProgress">
-                                        <rect key="frame" x="0.0" y="154" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="242" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mA0-gu-lcS" id="r9y-R6-hWt">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -91,12 +129,13 @@
                                                 <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="J76-WO-ohn">
                                                     <rect key="frame" x="20" y="20" width="374" height="4"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="tintColor" systemColor="systemGreenColor"/>
                                                 </progressView>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="daysText" rowHeight="43" id="6rn-FL-8ut" userLabel="daysText">
-                                        <rect key="frame" x="0.0" y="198" width="414" height="43"/>
+                                        <rect key="frame" x="0.0" y="286" width="414" height="43"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6rn-FL-8ut" id="rXw-ZX-g4Y">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
@@ -121,7 +160,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="daysProgress" id="Nwr-C5-vHd" userLabel="daysProgress">
-                                        <rect key="frame" x="0.0" y="241" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="329" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Nwr-C5-vHd" id="4eL-xy-1Du">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -130,12 +169,13 @@
                                                 <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="rvJ-P0-MgS">
                                                     <rect key="frame" x="20" y="20" width="374" height="4"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="tintColor" systemColor="systemGreenColor"/>
                                                 </progressView>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="weeksText" rowHeight="40" id="YEe-R7-6sb" userLabel="weeksText">
-                                        <rect key="frame" x="0.0" y="285" width="414" height="40"/>
+                                        <rect key="frame" x="0.0" y="373" width="414" height="40"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YEe-R7-6sb" id="Qav-Jt-bsE">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
@@ -160,7 +200,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="weeksProgress" id="rUU-Pg-7Jj" userLabel="weeksProgress">
-                                        <rect key="frame" x="0.0" y="325" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="413" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rUU-Pg-7Jj" id="QDq-aL-OrC">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -169,12 +209,13 @@
                                                 <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vXB-5U-Tre">
                                                     <rect key="frame" x="20" y="20" width="374" height="4"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="tintColor" systemColor="systemGreenColor"/>
                                                 </progressView>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="monthsText" rowHeight="55" id="cfy-zE-1dN" userLabel="monthsText">
-                                        <rect key="frame" x="0.0" y="369" width="414" height="55"/>
+                                        <rect key="frame" x="0.0" y="457" width="414" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cfy-zE-1dN" id="mcv-Mv-lZc">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
@@ -199,7 +240,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="monthsProgress" id="v5n-A4-DSz" userLabel="monthsProgress">
-                                        <rect key="frame" x="0.0" y="424" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="512" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="v5n-A4-DSz" id="bVk-CE-Khw">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -211,9 +252,10 @@
                                                 </progressView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="tintColor" systemColor="systemGreenColor"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="yearsText" rowHeight="53" id="xsE-8v-3jv" userLabel="yearsText">
-                                        <rect key="frame" x="0.0" y="468" width="414" height="53"/>
+                                        <rect key="frame" x="0.0" y="556" width="414" height="53"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xsE-8v-3jv" id="eh1-pf-Uw3">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="53"/>
@@ -238,7 +280,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="yearsProgress" id="Qn2-y3-Wlg" userLabel="yearsProgress">
-                                        <rect key="frame" x="0.0" y="521" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="609" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qn2-y3-Wlg" id="ZTe-m2-3BT">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -250,6 +292,7 @@
                                                 </progressView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="tintColor" systemColor="systemGreenColor"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -259,13 +302,19 @@
                             <outlet property="delegate" destination="nOq-OX-cHk" id="8nj-mH-mGo"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Time" id="Ahv-Lt-nVy">
+                        <imageReference key="image" image="clock" catalog="system" renderingMode="original"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" title="Summary" id="z4u-EX-cyz">
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="rpo-Jj-2OC"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="secondsProgressView" destination="sjK-ws-UKv" id="fmX-Ce-nxw"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bpI-d8-Ok4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5326" y="-269"/>
+            <point key="canvasLocation" x="1722" y="1118"/>
         </scene>
         <!--Your Habits-->
         <scene sceneID="e4i-yn-Cj1">
@@ -372,7 +421,6 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     <connections>
-                                                        <action selector="moneyEditingChanged:" destination="F81-is-avT" eventType="editingChanged" id="tG5-XY-7uW"/>
                                                         <action selector="returnPressed:" destination="F81-is-avT" eventType="primaryActionTriggered" id="1OJ-p8-aJ0"/>
                                                         <action selector="returnPressed:" destination="F81-is-avT" eventType="editingDidEnd" id="LDk-DZ-4tT"/>
                                                     </connections>
@@ -394,7 +442,7 @@
                                                 <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="sqq-vz-SUz">
                                                     <rect key="frame" x="0.0" y="40" width="414" height="216"/>
                                                     <connections>
-                                                        <action selector="quitDatePickerChanged:" destination="F81-is-avT" eventType="primaryActionTriggered" id="i6r-KP-6U0"/>
+                                                        <action selector="quitDatePickerChanged:" destination="F81-is-avT" eventType="valueChanged" id="0H1-7F-DWH"/>
                                                     </connections>
                                                 </datePicker>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quit Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RE9-nl-xEI">
@@ -403,9 +451,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KyH-Je-nRo">
-                                                    <rect key="frame" x="224" y="11" width="170" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KyH-Je-nRo">
+                                                    <rect key="frame" x="352.5" y="11" width="41.5" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -414,8 +461,12 @@
                                             <constraints>
                                                 <constraint firstItem="RE9-nl-xEI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ANh-oB-KO3" secondAttribute="leading" symbolic="YES" id="AK6-xk-dif"/>
                                                 <constraint firstItem="sqq-vz-SUz" firstAttribute="leading" secondItem="ANh-oB-KO3" secondAttribute="leading" id="OgF-E3-69c"/>
+                                                <constraint firstItem="KyH-Je-nRo" firstAttribute="top" secondItem="ANh-oB-KO3" secondAttribute="topMargin" id="Vh0-S9-bWG"/>
                                                 <constraint firstAttribute="trailing" secondItem="RE9-nl-xEI" secondAttribute="trailing" constant="322" id="Xsg-Rn-Mfz"/>
+                                                <constraint firstItem="sqq-vz-SUz" firstAttribute="top" secondItem="KyH-Je-nRo" secondAttribute="bottom" constant="8" symbolic="YES" id="eJc-Ia-6Hl"/>
+                                                <constraint firstItem="KyH-Je-nRo" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="RE9-nl-xEI" secondAttribute="trailing" symbolic="YES" id="eqG-h4-feY"/>
                                                 <constraint firstItem="sqq-vz-SUz" firstAttribute="top" secondItem="RE9-nl-xEI" secondAttribute="bottom" constant="8" symbolic="YES" id="q26-YE-zx1"/>
+                                                <constraint firstItem="KyH-Je-nRo" firstAttribute="trailing" secondItem="ANh-oB-KO3" secondAttribute="trailingMargin" id="s7j-Ah-wTg"/>
                                                 <constraint firstAttribute="trailing" secondItem="sqq-vz-SUz" secondAttribute="trailing" id="sI2-SF-jL5"/>
                                                 <constraint firstItem="RE9-nl-xEI" firstAttribute="top" secondItem="ANh-oB-KO3" secondAttribute="top" constant="11" id="whT-ka-zhP"/>
                                             </constraints>
@@ -442,10 +493,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="dateQuitPicker" destination="sqq-vz-SUz" id="1Dj-mL-gQH"/>
                         <outlet property="habitTextField" destination="kKn-ii-bTm" id="hTQ-vp-qze"/>
                         <outlet property="moneySpentTextField" destination="T5k-0i-p88" id="I27-5C-RS7"/>
                         <outlet property="quitDateLabel" destination="KyH-Je-nRo" id="s03-GA-NKY"/>
+                        <outlet property="quitDatePickerView" destination="sqq-vz-SUz" id="erZ-Eh-HyJ"/>
                         <outlet property="saveButton" destination="AlH-m9-QrQ" id="yYO-3d-ZoK"/>
                     </connections>
                 </tableViewController>
@@ -489,25 +540,6 @@
             </objects>
             <point key="canvasLocation" x="751" y="1118"/>
         </scene>
-        <!--Goals-->
-        <scene sceneID="NJi-Yo-N4Z">
-            <objects>
-                <viewController id="vGu-d5-9Sr" userLabel="Goals" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="W15-uE-QYG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="vXn-5p-iFU"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Time" id="VZF-Ca-WLd">
-                        <imageReference key="image" image="clock" catalog="system" renderingMode="original"/>
-                        <imageReference key="selectedImage" image="clock" catalog="system" renderingMode="original"/>
-                    </tabBarItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eV7-DM-9P4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1738" y="1118"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="vG2-Cb-9Yz">
             <objects>
@@ -520,9 +552,9 @@
                     </tabBar>
                     <connections>
                         <segue destination="in1-o2-EQF" kind="relationship" relationship="viewControllers" id="7nZ-Mb-wEA"/>
-                        <segue destination="vGu-d5-9Sr" kind="relationship" relationship="viewControllers" id="Tb1-YC-NVn"/>
                         <segue destination="dIf-PO-Z4j" kind="relationship" relationship="viewControllers" id="69L-t2-HKk"/>
                         <segue destination="ml5-CI-ssX" kind="relationship" relationship="viewControllers" id="Sea-OW-YIS"/>
+                        <segue destination="nOq-OX-cHk" kind="relationship" relationship="viewControllers" id="yln-Eh-WYb"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="snm-KN-tEi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -568,22 +600,10 @@
         <image name="dollarsign.square" catalog="system" width="128" height="114"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <systemColor name="systemBackgroundColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

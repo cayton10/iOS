@@ -2,7 +2,7 @@
 //  HabitViewController.swift
 //  SoberTrax
 //
-//  Created by Benjamin Paul Cayton on 12/7/20.
+//  Created by Benjamin Paul Cayton on 11/22/20.
 //
 
 import UIKit
@@ -12,6 +12,9 @@ class HabitViewController: UITableViewController, UITextFieldDelegate {
     
     //Declare our model habit variable
     var habit: Habit?
+    var quitDate: Date?
+    
+    
     
     //Hide the date picker for screen real estate
     var isPickerHidden = true
@@ -19,12 +22,13 @@ class HabitViewController: UITableViewController, UITextFieldDelegate {
     //View did load
     override func viewDidLoad(){
         super.viewDidLoad()
-        updateQuitDateLabel(date: dateQuitPicker.date)
+        updateQuitDateLabel(date: quitDatePickerView.date)
         updateSaveButtonState()
         
         moneySpentTextField.delegate = self
         
         moneySpentTextField.placeholder = updateAmount()
+        
     }
     
     //Connect all control and view outlets
@@ -34,7 +38,7 @@ class HabitViewController: UITableViewController, UITextFieldDelegate {
     //All logic behind currency text field
     var amt: Int = 0
     @IBOutlet weak var quitDateLabel: UILabel!
-    @IBOutlet weak var dateQuitPicker: UIDatePicker!
+    @IBOutlet weak var quitDatePickerView: UIDatePicker!
     
     //Disable the save button unless information is entered for all
     //habit properties
@@ -43,9 +47,7 @@ class HabitViewController: UITableViewController, UITextFieldDelegate {
     //Disable helper
     func updateSaveButtonState() {
         let text = habitTextField.text ?? ""
-        let money = moneySpentTextField.text ?? ""
         saveButton.isEnabled = !text.isEmpty
-        saveButton.isEnabled = !money.isEmpty
     }
     
     //Update save button on text change for habit name
@@ -53,10 +55,6 @@ class HabitViewController: UITableViewController, UITextFieldDelegate {
         updateSaveButtonState()
     }
     
-    //Update save button on text change for money spent
-    @IBAction func moneyEditingChanged(_ sender: UITextField) {
-        updateSaveButtonState()
-    }
     
     /*
      Dismiss keyboard using return key for both text fields
@@ -69,16 +67,20 @@ class HabitViewController: UITableViewController, UITextFieldDelegate {
     //Set appropriate date for quitDateLabel
     func updateQuitDateLabel(date: Date) {
         quitDateLabel.text = Habit.quitDateFormatter.string(from: date)
+        
     }
 
     @IBAction func quitDatePickerChanged(_ sender: UIDatePicker) {
-        updateQuitDateLabel(date: dateQuitPicker.date)
+        updateQuitDateLabel(date: quitDatePickerView.date)
     }
+      
+       
     
     //Hide the quit date picker until it's clicked
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let normalCellHeight = CGFloat(44)
         let largeCellHeight = CGFloat(200)
+        
         
         switch(indexPath){
         case[2, 0]: //Quit date picker spent cell
@@ -106,22 +108,28 @@ class HabitViewController: UITableViewController, UITextFieldDelegate {
         }
     }
     
+    
     //Save user's supplied todo information, prepare segue, lick stamp... send :)
     override func prepare(for segue: UIStoryboardSegue, sender:
     Any?) {
         super.prepare(for: segue, sender: sender)
         guard segue.identifier == "saveUnwind" else { return }
+        //Get user data from controls
         let name = habitTextField.text!
-        let quitDate = dateQuitPicker.date
-        if let money = Double(moneySpentTextField.text!){
-            //Load all the values into the singular ToDo type object
-            habit = Habit(title: name, dailyMoney: money, quitDate: quitDate)
-        } else {
+        let money = moneySpentTextField.text
+        let quitDate = quitDatePickerView.date
+        var formattedMoney: Double //Declare a conversion variable
+        
+        //Process our money string to give correct decimal value
+        if money != nil{
+            
+            formattedMoney = convertToDouble(string: money!)
+            //Then send our info
+            habit = Habit(title: name, dailyMoney: formattedMoney, quitDate: quitDate)
+        }
+         else {
             print("Not a valid number: \(moneySpentTextField.text!)")
         }
-        
-        //Make sure to designate notes as an optional
-
         
     }
     
@@ -132,6 +140,10 @@ class HabitViewController: UITableViewController, UITextFieldDelegate {
         as an integer and computed into decimal format, so we can pass it to the updateAmount function. Amount is processed as
         a double value, then recast back to string for output to the text field in currency / double format. This eliminates the need for
         users to type commas, decimals, and currency symbols when inputting their data.
+     */
+    
+    /*Here is the YT link I used to help guide me through this workflow
+     https://www.youtube.com/watch?v=YBBNPH6JYxY
      */
     
     //Update the text field
@@ -187,6 +199,23 @@ class HabitViewController: UITableViewController, UITextFieldDelegate {
     
     /**
  *End help*/
+    
+    //Now I need a function to revert the string back to double, did i mention I absolutely hate swift?
+    
+    func convertToDouble(string: String) -> Double {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        
+        if let number = formatter.number(from: string) {
+            let amount = Double(exactly: number)!
+            return amount
+        }
+        else {
+            return 0.00
+        }
+            
+        
+    }
     
     
 }

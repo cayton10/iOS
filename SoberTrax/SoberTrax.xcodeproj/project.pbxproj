@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E83A19A7257FD48A00F41EC7 /* TimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83A19A6257FD48900F41EC7 /* TimeViewController.swift */; };
 		E888A348254882730009C8A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888A347254882730009C8A7 /* AppDelegate.swift */; };
 		E888A34A254882730009C8A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E888A349254882730009C8A7 /* SceneDelegate.swift */; };
 		E888A34F254882730009C8A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E888A34D254882730009C8A7 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E83A19A6257FD48900F41EC7 /* TimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeViewController.swift; sourceTree = "<group>"; };
 		E888A344254882730009C8A7 /* SoberTrax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoberTrax.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E888A347254882730009C8A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E888A349254882730009C8A7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				E888A347254882730009C8A7 /* AppDelegate.swift */,
 				E888A349254882730009C8A7 /* SceneDelegate.swift */,
 				E888A34D254882730009C8A7 /* Main.storyboard */,
+				E83A19A6257FD48900F41EC7 /* TimeViewController.swift */,
 				E8C1011F257ED54900770632 /* HabitViewController.swift */,
 				E8C10114257DBCF500770632 /* HabitTableViewController.swift */,
 				E888A350254882740009C8A7 /* Assets.xcassets */,
@@ -265,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8C10115257DBCF500770632 /* HabitTableViewController.swift in Sources */,
+				E83A19A7257FD48A00F41EC7 /* TimeViewController.swift in Sources */,
 				E888A348254882730009C8A7 /* AppDelegate.swift in Sources */,
 				E8C10120257ED54900770632 /* HabitViewController.swift in Sources */,
 				E8C10110257DBA7800770632 /* habit.swift in Sources */,
