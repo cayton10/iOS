@@ -12,10 +12,17 @@ import Foundation
 struct Habit{
     
     var title: String
-    var dailyMoney: Float
-    var dailyTime: Float //Not sure what data type to use here
+    var dailyMoney: Double
     var quitDate: Date
     
+    
+    //Date formatters
+    static let quitDateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        formatter.timeStyle = .short
+        return formatter
+    }()
     
     //Static method to load habits array with test data
     static func loadHabits() -> [Habit]? {
@@ -25,9 +32,9 @@ struct Habit{
     
     //Static function
     static func loadSampleHabits() -> [Habit]? {
-        let habit1 = Habit(title: "Alcohol", dailyMoney: 7.00, dailyTime: 0.66, quitDate: Date())
-        let habit2 = Habit(title: "Doughnuts", dailyMoney: 5.00, dailyTime: 0.10, quitDate: Date())
-        let habit3 = Habit(title: "Sleeping In", dailyMoney: 0.00, dailyTime: 0.33, quitDate: Date())
+        let habit1 = Habit(title: "Alcohol", dailyMoney: 7.00, quitDate: Date())
+        let habit2 = Habit(title: "Doughnuts", dailyMoney: 5.00, quitDate: Date())
+        let habit3 = Habit(title: "Sleeping In", dailyMoney: 0.00, quitDate: Date())
         
         return [habit1, habit2, habit3]
     }
